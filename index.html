@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Age Calculator</title>
-  </head>
-  <body>
-    <h1>Age Calculator</h1>
-    <p>Enter your date of birth:</p>
-    <input type="date" id="dateOfBirth" />
-    <button onclick="calculateAge()">Calculate Age</button>
-    <p id="ageDisplay"></p>
-
-
-
-
-    <!--  -->
-    <script>
-    function calculateAge() {
-        const dob = new Date(document.getElementById("dateOfBirth").value);
-        const today = new Date();
-        const ageYears = Math.floor((today - dob) / (365.25 * 24 * 60 * 60 * 1000));
-        document.getElementById("ageDisplay").innerHTML = "Your age is: " + ageYears + " years old";
-      }
-              
-    </script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- my nav bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" id="navbar-logo">TEmpo</a>
+      <div class="navbar_toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar_menu">
+        <li class="navbar-item"><a class="navbar-link" href="/">home</a></li>
+        <li class="navbar-item" ><a  class="navbar-link" href="/">department</a></li>
+        <li class="navbar-item"><a  class="navbar-link" href="/">item </a></li>
+        <li class="navbar-btn" ><a  class="btn" href="/">Signup</a></li>
+      </ul>
+    </div>
+  </nav>
+  <script src="app.js"></script>
+</body>
 </html>
